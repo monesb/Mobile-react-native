@@ -1,0 +1,16 @@
+import React from 'react';
+import { View, Text, Image, Button } from 'react-native';
+import styles from '../style/Style';
+
+const Articles = ({ item, onAddToCart }) => (
+	<View style={styles.articleContainer}>
+		<Image source={{ uri: item.image }} style={styles.image} />
+		<View style={styles.info}>
+			<Text style={styles.nom}>{item.name}</Text>
+			<Text style={styles.prix}>{item.prix}</Text>
+			<Button title="Ajouter au panier" onPress={onAddToCart} />
+		</View>
+	</View>
+);
+
+export default Articles;
